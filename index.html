@@ -25,46 +25,146 @@
         <div id="bgfooter">
         </div>
         <main id="windowuser" class="centered-axis d-flex">
-            <div id="contacts">
-                <header>
-                    <nav class="navbar bg-body-tertiary">
-                        <div class="container-fluid">
-                            <div>
-                                <img src="img/avatar_1.jpg" alt="">
-                                <span class="fs-4">Sofia</span>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-spinner fs-2rem mx-3"></i>
-                                <i class="fa-solid fa-message fs-2rem"></i>
-                                <i class="fa-solid fa-ellipsis-vertical fs-2rem mx-3"></i>
-                            </div>
+            <!-- Contacts aside -->
+            <div id="contacts" class="d-flex flex-column align-items-center">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <div>
+                            <img src="img/avatar_1.jpg" alt="">
+                            <span class="fs-4">Sofia</span>
                         </div>
-                    </nav>
-                </header>
+                        <div>
+                            <i class="fa-solid fa-spinner fs-15rem mx-3"></i>
+                            <i class="fa-solid fa-message fs-15rem"></i>
+                            <i class="fa-solid fa-ellipsis-vertical fs-15rem mx-3"></i>
+                        </div>
+                    </div>
+                </nav>
+                <!-- notification & Search for Contac's chat-->
+                <div id="notifytext"  class="d-flex align-items-center py-3">
+                    <i class="fa-solid fa-bell-slash fs-15rem mx-2 txt-sky"></i>
+                    <div class="mx-2">
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <br>
+                        <span class="fs-08rem">Attiva notifiche Desktop</span>
+                    </div>
+                </div>
+                <input id="searchat" name="searchat" class="my-2"  type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" >
+                <div id="listcontacts" class="list-group">
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img src="img/avatar_3.jpg" alt="">
+                        <div>
+                            <span>Luigi</span>
+                            <br>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                  </div>
             </div>
+            <!-- Chat View -->
             <div id="chat">
-                <header>
-                    <nav class="navbar bg-body-tertiary border-right">
-                        <div class="container-fluid">
-                            <div class="d-flex">
-                                <img src="img/avatar_2.jpg" alt="">
-                                <div>
-                                    <span class="fs-4">Claudio</span>
-                                    <br>
-                                    <span>Ultimo Acesso oggi alle 12:00</span>
-                                </div>
-                            </div>
+                <!-- Navbar -->
+                <nav class="navbar bg-body-tertiary border-right">
+                    <div class="container-fluid">
+                        <div class="d-flex">
+                            <img src="img/avatar_2.jpg" alt="">
                             <div>
-                                <i class="fa-solid fa-magnifying-glass fs-2rem mx-3"></i>
-                                <i class="fa-solid fa-paperclip fs-2rem"></i>
-                                <i class="fa-solid fa-ellipsis-vertical fs-2rem mx-3"></i>
+                                <span class="fs-4">Claudio</span>
+                                <br>
+                                <span>Ultimo Acesso oggi alle 12:00</span>
                             </div>
                         </div>
-                    </nav>
-                </header>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass fs-15rem mx-3"></i>
+                            <i class="fa-solid fa-paperclip fs-15rem"></i>
+                            <i class="fa-solid fa-ellipsis-vertical fs-15rem mx-3"></i>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </main>
     </div>
+    <img src="i" alt="">
     
 </body>
 </html>
