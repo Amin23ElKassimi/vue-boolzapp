@@ -19,11 +19,13 @@
         <title>Boolzapp</title>
 </head>
 <body>
-    <div id="containerpage">
+    <div id="app">
+        <!-- Background -->
         <div id="bghead">
         </div>
         <div id="bgfooter">
         </div>
+        <!-- Whatsap Window -->
         <main id="windowuser" class="centered-axis d-flex">
             <!-- Contacts aside -->
             <div id="contacts" class="d-flex flex-column align-items-center">
@@ -49,97 +51,19 @@
                         <span class="fs-08rem">Attiva notifiche Desktop</span>
                     </div>
                 </div>
+                <!-- Search for contact's chat -->
                 <input id="searchat" name="searchat" class="my-2"  type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" >
+                <!-- List Contacts -->
                 <div id="listcontacts" class="list-group">
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
+                    <div v-for="(contact, index) in contacts" :key="index" type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <img :src="contact.image" alt="">
                         <div>
-                            <span>Luigi</span>
+                            <span>{{contact.name}}</span>
                             <br>
                             <span>Ultimo accesso</span>
                         </div>
                     </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                    <div type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <div>
-                            <span>Luigi</span>
-                            <br>
-                            <span>Ultimo accesso</span>
-                        </div>
-                    </div>
-                  </div>
+                </div>
             </div>
             <!-- Chat View -->
             <div id="chat">
@@ -214,13 +138,12 @@
                 <div class="inmsg bg-body-tertiary">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                         <button class="btn mx-1" type="submit"><i class="fa-regular fa-face-smile fs-15rem"></i></button>
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" type="text" placeholder="Scrivi un Messaggio" aria-label="Search">
                         <button class="btn mx-1" type="submit"><i class="fa-solid fa-microphone fs-15rem"></i></button>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-    
 </body>
 </html>
