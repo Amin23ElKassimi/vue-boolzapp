@@ -76,7 +76,7 @@
     height: 81%;
 }
 
-.sender{
+.sent{
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
@@ -84,7 +84,7 @@
     margin: 1rem;
 }
 
-.addressee{
+.received{
     background-color: #d5f9ba;
     padding: 1rem;
     border-radius: 10px;
@@ -139,7 +139,10 @@ img{
     border-radius: 50%;
 }
 
-
+#contacts > div{
+    width: 100%;
+     height: 91%;
+}
 
 
 

@@ -42,25 +42,27 @@
                         </div>
                     </div>
                 </nav>
-                <!-- notification & Search for Contac's chat-->
-                <div id="notifytext"  class="d-flex align-items-center py-3">
-                    <i class="fa-solid fa-bell-slash fs-15rem mx-2 txt-sky"></i>
-                    <div class="mx-2">
-                        <span>Ricevi notifiche di nuovi messaggi</span>
-                        <br>
-                        <span class="fs-08rem">Attiva notifiche Desktop</span>
-                    </div>
-                </div>
-                <!-- Search for contact's chat -->
-                <input id="searchat" name="searchat" class="my-2"  type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" >
-                <!-- List Contacts -->
-                <div id="listcontacts" class="list-group">
-                    <div v-for="(contact, index) in contacts" :key="index" type="button" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <img :src="contact.image" alt="">
-                        <div>
-                            <span>{{contact.name}}</span>
+                <div class="d-flex flex-column align-items-center">
+                    <!-- notification & Search for Contac's chat-->
+                    <div id="notifytext"  class="d-flex align-items-center py-3">
+                        <i class="fa-solid fa-bell-slash fs-15rem mx-2 txt-sky"></i>
+                        <div class="mx-2">
+                            <span>Ricevi notifiche di nuovi messaggi</span>
                             <br>
-                            <span>Ultimo accesso</span>
+                            <span class="fs-08rem">Attiva notifiche Desktop</span>
+                        </div>
+                    </div>
+                    <!-- Search for contact's chat -->
+                    <input id="searchat" name="searchat" class="my-2"  type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" >
+                    <!-- List Contacts -->
+                    <div id="listcontacts" class="list-group">
+                        <div v-for="(contact, index) in contacts" :key="index" type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <img :src="contact.image" alt="">
+                            <div>
+                                <span>{{contact.name}}</span>
+                                <br>
+                                <span>Ultimo accesso</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,8 +89,8 @@
                 </nav>
                 <!-- Window of messages -->
                 <div id="messages-window" >
-                    <div                class="sender">
-                        Message 01
+                    <div v-for="(text) in contacts.messages"  :class="(text.status == 'received') ? 'received' : 'sent'">
+                        {{text.message}}
                     </div>
                 </div>
                 <!-- Input type messages -->

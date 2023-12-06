@@ -6,7 +6,7 @@ createApp({
     data() {
         return {
             contacts: [
-                    {   name: 'Amin', image: 'img/avatar_2.jpg',
+                    {name: 'Amin', image: 'img/avatar_2.jpg',
                     visible: true,
                     messages: [
                     {
@@ -241,7 +241,8 @@ createApp({
         removeTask(index){
             this.todoList.splice(index,1);
         },
-
+        
+    
 
     },
 }).mount('#app');
