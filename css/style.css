@@ -66,6 +66,7 @@ img{
 
 #contacts > .navbar{
     width: 100%;
+    height: 9%;
 }
 
 #notifytext{
@@ -80,6 +81,7 @@ img{
     display: flex;
     flex-direction: column;
     overflow: auto;
+    height: 81%;
 }
 
 .sender{
@@ -99,6 +101,10 @@ img{
     align-self: self-end;
 }
 
+.inmsg{
+    height: 10%;
+    display: flex;
+}
 
 
 /* Borders */
