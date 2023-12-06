@@ -6,26 +6,26 @@ createApp({
     data() {
         return {
             contacts: [
-                    {   name: 'Fatima', image: 'https://i.pravatar.cc/43?img=47',
-                        visible: true,
-                        messages: [
-                        {
-                            date: '10/01/2020 15:30:55',
-                            message: 'Hai portato a spasso il cane?',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 15:50:00',
-                            message: 'Ricordati di stendere i panni',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 16:15:22',
-                            message: 'Tutto fatto!',
-                            status: 'received'
-                        }
-                    ]},
                     {   name: 'Amin', image: 'img/avatar_2.jpg',
+                    visible: true,
+                    messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: 'Hai portato a spasso il cane?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Ricordati di stendere i panni',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 16:15:22',
+                        message: 'Tutto fatto!',
+                        status: 'received'
+                    }
+                    ]},  
+                    {   name: 'Zoe', image: 'https://i.pravatar.cc/47?img=19',
                         visible: true,
                         messages: [
                         {
@@ -82,7 +82,7 @@ createApp({
                             status: 'received'
                         }
                     ]},
-                    {   name: 'Jessica', image: 'img/avatar_4.jpg',
+                    {   name: 'Francesco', image: 'img/avatar_4.jpg',
                     visible: true,
                     messages: [
                     {
@@ -215,7 +215,6 @@ createApp({
                         status: 'received'
                     }
                     ]},                    
-
                     {   name: 'Adele', image: 'https://i.pravatar.cc/43?img=29',
                     visible: true,
                     messages: [
@@ -246,3 +245,6 @@ createApp({
 
     },
 }).mount('#app');
+
+
+
