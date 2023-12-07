@@ -58,7 +58,7 @@
                     <input v-model="search" id="searchat" name="searchat" class="my-2"  type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" >
                     <!-- List Contacts -->
                     <div id="listcontacts" class="list-group">
-                        <div v-for="(contact, index) in filterContacts" @click="updateChat(index)"  type="button" class="list-group-item list-group-item-action d-flex align-items-center" >
+                        <div v-for="(contact, index) in filterContacts()" @click="updateChat(index)"  type="button" class="list-group-item list-group-item-action d-flex align-items-center" >
                             <img :src="contact.image" alt="">
                             <div>
                                 <span>{{contact.name}}</span>
