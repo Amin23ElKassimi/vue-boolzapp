@@ -76,7 +76,7 @@
     height: 81%;
 }
 
-.sent{
+.received{
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
@@ -84,7 +84,7 @@
     margin: 1rem;
 }
 
-.received{
+.sent{
     background-color: #d5f9ba;
     padding: 1rem;
     border-radius: 10px;

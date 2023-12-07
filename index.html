@@ -29,6 +29,7 @@
         <main id="windowuser" class="centered-axis d-flex">
             <!-- Contacts aside -->
             <div id="contacts" class="d-flex flex-column align-items-center">
+                <!-- User Info -->
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
                         <div>
@@ -42,6 +43,7 @@
                         </div>
                     </div>
                 </nav>
+                <!-- List -->
                 <div class="d-flex flex-column align-items-center">
                     <!-- notification & Search for Contac's chat-->
                     <div id="notifytext"  class="d-flex align-items-center py-3">
@@ -56,7 +58,7 @@
                     <input id="searchat" name="searchat" class="my-2"  type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search" >
                     <!-- List Contacts -->
                     <div id="listcontacts" class="list-group">
-                        <div v-for="(contact, index) in contacts" :key="index" type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <div v-for="(contact, index) in contacts" @click="updateChat(index)"  type="button" class="list-group-item list-group-item-action d-flex align-items-center" >
                             <img :src="contact.image" alt="">
                             <div>
                                 <span>{{contact.name}}</span>
@@ -89,15 +91,15 @@
                 </nav>
                 <!-- Window of messages -->
                 <div id="messages-window" >
-                    <div v-for="(text) in contacts.messages"  :class="(text.status == 'received') ? 'received' : 'sent'">
-                        {{text.message}}
+                    <div v-for="(message) in contacts[indexChat].messages" :class="(message.status == 'received') ? 'received' : 'sent'">
+                        {{message.message}}
                     </div>
                 </div>
                 <!-- Input type messages -->
                 <div class="inmsg bg-body-tertiary">
                     <div class="container-fluid d-flex justify-content-center align-items-center">
                         <button class="btn mx-1" type="submit"><i class="fa-regular fa-face-smile fs-15rem"></i></button>
-                        <input class="form-control me-2" type="text" placeholder="Scrivi un Messaggio" aria-label="Search">
+                        <input class="form-control me-2" type="text" placeholder="Scrivi un Messaggio" v-model="NewMessage" @keyup.enter="addNewMessage(NewMessage) + addNewAnswer()">
                         <button class="btn mx-1" type="submit"><i class="fa-solid fa-microphone fs-15rem"></i></button>
                     </div>
                 </div>
