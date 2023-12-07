@@ -336,11 +336,9 @@ createApp({
         },
 
         filterContacts(){
-             this.contacts.filter(contact => contact.name.includes(this.search))
-             console.log(this.contacts);
-             
+            return this.contacts.filter(contact => contact.name.includes(this.search))    
         }
-        
+
     
 
     },
